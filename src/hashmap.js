@@ -18,7 +18,7 @@ export class HashMap {
 			hashCode = hashCode % this.buckets.length;
 		}
 
-		return hashCode;
+		return this.#validate(hashCode);
 	}
 
 	set(key, value) {
@@ -150,6 +150,14 @@ export class HashMap {
 		});
 
 		return entries;
+	}
+
+	#validate(hashcode) {
+		if (hashcode < hashcode >= this.buckets.length) {
+			throw new Error("Trying to access index out of bound");
+		}
+
+		return hashcode;
 	}
 }
 
