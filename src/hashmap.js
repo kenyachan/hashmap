@@ -43,11 +43,7 @@ export class HashMap {
 			this.buckets[hashCode].insertAt(pair, existingKeyIndex);
 		} else {
 			this.buckets[hashCode].append(pair);
-			/*
-			 * check load/grow hash table
-			 * capacity * load factor - if number entries exceeds, grow
-			 */
-			
+
 			if (this.length() > (this.buckets.length * this.LOAD_FACTOR))
 				this.#growTable();	
 		}

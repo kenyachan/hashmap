@@ -1,4 +1,4 @@
-import { LinkedList, Node } from './linkedList.js';
+import { LinkedList, Node } from '../src/linkedList.js';
 
 const ITEMS = ['Item 1', 'Item 2', 'Item 3', 'Item 4', 'Item 5'];
 const OBJS = [{'key' : 1}, {'key' : 2}, {'key' : 3}, {'key' : 4}, {'key' : 5}];
